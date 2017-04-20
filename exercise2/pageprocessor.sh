@@ -13,7 +13,7 @@ outputFile=$3
 # gets Property By key
 function getProp() {    
    local KEY=$1
-   local VAL=`cat $propFile | grep "$KEY" | cut -d'=' -f2`
+   local VAL=$(cat $propFile | grep "^$KEY" | cut -d'=' -f2)
    echo $VAL
 }
 
@@ -30,13 +30,13 @@ then
    if [ -n "$param" ]; then
      key=${param:2:-2}
      subst=$(getProp ${key})
-     printf " $key $subst\n"
      pat="\[\[${key}\]\]"
      sed -i "s,${pat},${subst},g" "$outputFile"
     else
     break;
     fi 
   done < $htmlFile
+  printf "File $outputFile processed successfully ! \n"
  else
   echo "$propFIle not found."
  fi
