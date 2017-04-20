@@ -99,7 +99,7 @@ public class OExercisesApplicationTests {
 	@Test
 	public void edgeScenario1() throws Exception {
 		assertThat(processor.truncate("123456789012345678901234567890", 22),
-				is(equalTo("1 ... (truncated) ... 0")));
+				is(equalTo("1 ... (truncated) ... ")));
 		assertThat(processor.truncate("123456789012345678901234567890", 22).length(),
 				is(equalTo(22)));
 	}
@@ -107,7 +107,7 @@ public class OExercisesApplicationTests {
 	@Test
 	public void edgeScenario2() throws Exception {
 		assertThat(processor.truncate("123456789012345678901234567890", 24),
-				is(equalTo("1 ... (truncated) ... 0")));
+				is(equalTo("12 ... (truncated) ... 0")));
 		assertThat(processor.truncate("123456789012345678901234567890", 24).length(),
 				is(equalTo(24)));
 	}

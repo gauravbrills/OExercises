@@ -1,5 +1,5 @@
 # Exercise 1: 
-The three use cases in the exercise are covered in issuMethodCallTest 1 2 and 3.
+The three use cases in the exercise are covered in [OExercisesApplicationTests.java](https://github.com/gauravbrills/OExercises/blob/master/src/test/java/me/gaurabrills/OExercisesApplicationTests.java) issueMethodCallTest1 2 and 3.
 
 ## Assumptions
 1. order details are send as a query param example `GET /subscribe?orderDetails=12121212`
@@ -12,3 +12,6 @@ The three use cases in the exercise are covered in issuMethodCallTest 1 2 and 3.
 
 
 # Exercise 2: 
+code is inside exercise2/pageprocessor.sh
+
+`usage: pageprocessor.sh (html-file) (prop-file) (output-file)`

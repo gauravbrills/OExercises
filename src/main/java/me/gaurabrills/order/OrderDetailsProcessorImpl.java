@@ -30,9 +30,9 @@ class OrderDetailsProcessorImpl implements OrderDetailsProcessor {
 		if (!(orderDtlsLen > noOfCharsAllwd && noOfCharsAllwd - repLen > 0)) {
 			return orderDetails;
 		}
-		int buffer = (int) Math.round((noOfCharsAllwd - repLen) / 2);
-		String truncated = orderDetails.substring(0, buffer) + REPLACEMENT
-				+ orderDetails.substring(orderDtlsLen - buffer);
+		double buffer = (double)(noOfCharsAllwd - repLen) / 2;
+		String truncated = orderDetails.substring(0, (int)Math.ceil(buffer)) + REPLACEMENT
+				+ orderDetails.substring(orderDtlsLen - (int)Math.floor(buffer));
 		return truncated;
 	}
 
