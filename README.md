@@ -12,6 +12,6 @@ The three use cases in the exercise are covered in [OExercisesApplicationTests.j
 
 
 # Exercise 2: 
-code is inside exercise2/pageprocessor.sh
+code is inside exercise2/[pageprocessor.sh](https://github.com/gauravbrills/OExercises/blob/master/exercise2/pageprocessor.sh)
 
 `usage: pageprocessor.sh (html-file) (prop-file) (output-file)`
